@@ -32,6 +32,10 @@ app.use(express.static("public"));
 import userRouter from "./routes/user.routes.js";
 
 app.use("/api/v1/users", userRouter);
+
+import todoRouter from "./routes/todo.routes.js";
+
+app.use("/api/v1/todos", todoRouter);
 //test
 // app.get("/login", (req,res) => {
 //   res.send("Hello testing done");

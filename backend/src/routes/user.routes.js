@@ -4,6 +4,7 @@ import {
   getCurrentUser,
   loginUser,
   logoutUser,
+  refreshAccessToken,
   registerUser,
   updateAccount,
   updatePassowrd,
@@ -22,6 +23,9 @@ router.route("/logout").post(verifyJWT, logoutUser);
 router.route("/current-user").get(verifyJWT, getCurrentUser);
 router.route("/update-account").patch(verifyJWT, updateAccount);
 router.route("/update-password").patch(verifyJWT, updatePassowrd);
-router.route("/update-profilePhoto").patch(verifyJWT,upload.single("profilePhoto"), updateProfilePhoto);
+router
+  .route("/update-profilePhoto")
+  .patch(verifyJWT, upload.single("profilePhoto"), updateProfilePhoto);
+router.route("/refreshAccessToken").patch(verifyJWT, refreshAccessToken);
 
 export default router;
