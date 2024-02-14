@@ -28,6 +28,10 @@ app.use(
 
 app.use(express.static("public"));
 
+//Routes
+import userRouter from "./routes/user.routes.js";
+
+app.use("/api/v1/users", userRouter);
 //test
 // app.get("/login", (req,res) => {
 //   res.send("Hello testing done");
