@@ -1,42 +1,124 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar styling */
+.navbar-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #dcf2f1;
+}
+
+.unordered-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item {
+  margin: 0 15px 0 15px;
+  font-size: 18px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: xx-large;
+  margin: 0 15px 0 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.show {
+  text-decoration: underline;
+  transition: 2s ease-in;
+}
+
+.close-option{
+  display: none;
+}
+
+.menu-option {
+  display: none;
+}
+
+@media (max-width: 477px) {
+  .unordered-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 150px;
+    background-color: #dcf2f1;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-option {
+    display: block;
+    font-size: larger;
+  }
+
+  .close-option {
+    display: block;
+    font-size: larger;
+    position: absolute;
+    top: 20px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Footer beginning */
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #0F1035;
+  color: gray;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
 }
 
-.card {
-  padding: 2em;
+.footer .logo{
+  font-size: 50px;
 }
 
-.read-the-docs {
-  color: #888;
+.footer .right-side{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px;
+}
+
+
+.footer .icons{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
