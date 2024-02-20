@@ -91,7 +91,7 @@
   color: gray;
   width: 100%;
   padding: 10px;
-  position: absolute;
+  position: relative;
   bottom: 0px;
 }
 
